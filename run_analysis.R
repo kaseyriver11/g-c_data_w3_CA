@@ -13,13 +13,13 @@ setwd("C:/Users/kaseyriver11/Desktop/Data Science Classes/Getting and Cleaning D
 # Part 1
 # Read in all of the files
 # Test Files
-y.test  <- read.table(file.path("test/Y_test.txt"), header = FALSE)         # Activity
-x.test  <- read.table(file.path("test/X_test.txt"), header = FALSE)         # Read Features
-sub.test <- read.table(file.path("test/subject_test.txt"), header = FALSE)  # Subject
+y.test  <- read.table(file.path("test/Y_test.txt"), header = FALSE)            # Activity
+x.test  <- read.table(file.path("test/X_test.txt"), header = FALSE)            # Read Features
+sub.test <- read.table(file.path("test/subject_test.txt"), header = FALSE)     # Subject
 # Train Files
-y.train <- read.table(file.path("train/Y_train.txt"), header = FALSE)       # Activity
-x.train <- read.table(file.path("train/X_train.txt"), header = FALSE)       # Read Features
-sub.train <- read.table(file.path("train/subject_train.txt"), header = FALSE) # Subject
+y.train <- read.table(file.path("train/Y_train.txt"), header = FALSE)          # Activity
+x.train <- read.table(file.path("train/X_train.txt"), header = FALSE)          # Read Features
+sub.train <- read.table(file.path("train/subject_train.txt"), header = FALSE)  # Subject
 
 
 # Merge the Data Set
@@ -69,14 +69,6 @@ names(data)<-gsub("BodyBody", "Body", names(data))
 data2 <- aggregate(. ~Subject + Activity, data, mean)
 data2 <- data2[order(data2$Subject, data2$Activity),]
 write.table(data2, file = "tidydata.txt",row.name=FALSE)
-
-
-
-
-
-
-
-
 
 
 
