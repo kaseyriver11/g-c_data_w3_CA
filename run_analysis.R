@@ -1,6 +1,6 @@
 # The Script
 # Set the WD
-setwd("C:/Users/kaseyriver11/Desktop/Data Science Classes/Getting and Cleaning Data")
+# setwd("C:/Users/kaseyriver11/Desktop/Data Science Classes/Getting and Cleaning Data")
 
 if(!file.exists("./data")){dir.create("./data")}
 
